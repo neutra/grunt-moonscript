@@ -11,9 +11,9 @@ moonscript:
 	build:
 		files: [
 			expand: yes
-			cwd: "moon/"
+			cwd: "moon"
 			src: "**/*.moon"
-			dest: "lua/"
+			dest: "../lua"
 			ext: ".lua"
 		]
 ```

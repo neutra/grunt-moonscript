@@ -10,12 +10,14 @@
 
 module.exports = function(grunt) {
   grunt.registerMultiTask('moonscript', 'compile moonscript to lua', function(){
-    var data = this.data;
-    var files = grunt.file.expand({ cwd: data.files.cwd }, data.files.src);
-    grunt.util.spawn({
-      cmd: 'moonc',
-      args: ['-t', data.files.dest].concat(files),
-      opts: { cwd: data.files.cwd }
-    }, this.async());
+  var async = this.async();
+    this.data.files.forEach(function(f){
+      var files = grunt.file.expand({ cwd: f.cwd }, f.src);
+      grunt.util.spawn({
+        cmd: 'moonc',
+        args: ['-t', f.dest].concat(files),
+        opts: { cwd: f.cwd }
+      }, async);
+    });
   });
 }
