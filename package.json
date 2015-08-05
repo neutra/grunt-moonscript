@@ -1,0 +1,41 @@
+{
+  "name": "grunt-moonscript",
+  "description": "convert moonscript to lua",
+  "version": "1.0.0",
+  "homepage": "https://github.com/neutra/grunt-moonscript",
+  "author": {
+    "name": "Neutra",
+    "email": "neutra@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neutra/grunt-moonscript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neutra/grunt-moonscript/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/neutra/grunt-moonscript/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
