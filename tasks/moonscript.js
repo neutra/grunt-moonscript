@@ -17,4 +17,5 @@ module.exports = function(grunt) {
       args: ['-t', data.files.dest].concat(files),
       opts: { cwd: data.files.cwd }
     }, this.async());
-};
+  });
+}

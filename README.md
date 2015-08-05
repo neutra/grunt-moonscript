@@ -12,7 +12,7 @@ moonscript:
 		files: [
 			expand: yes
 			cwd: "moon/"
-			src: "*.moon"
+			src: "**/*.moon"
 			dest: "lua/"
 			ext: ".lua"
 		]
