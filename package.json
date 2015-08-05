@@ -1,6 +1,6 @@
 {
   "name": "grunt-moonscript",
-  "description": "convert moonscript to lua",
+  "description": "compile moonscript to lua using moonc",
   "version": "1.0.0",
   "homepage": "https://github.com/neutra/grunt-moonscript",
   "author": {

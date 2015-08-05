@@ -1,6 +1,8 @@
 # grunt-moonscript
 
-Reference: https://code.mattcampbell.net/moonscript-template/commit/f4f349d283834902664fb0027c144fd2ac2fc29d/
+compile moonscript to lua using moonc, moonc should be found in PATH.
+
+ref: https://code.mattcampbell.net/moonscript-template/commit/f4f349d283834902664fb0027c144fd2ac2fc29d/
 
 Example:
 
