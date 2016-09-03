@@ -1,8 +1,8 @@
 /*
- * grunt-hjson
- * https://github.com/neutra/grunt-hjson
+ * grunt-moonscript
+ * https://github.com/goofanader/grunt-moonscript
  *
- * Copyright (c) 2015 neutra
+ * Copyright (c) 2016 goofanader, Neutra
  * Licensed under the MIT license.
  */
 
@@ -29,22 +29,48 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    hjson: {
-      default_options: {
-        options: {
-        },
+    moonscript: {
+      bad_file_test: {
+          src: ['test/null.moon']
+      },
+      one_file_test: {
+        src: 'test/1.moon'
+      },
+      multiple_files_test: {
+        src: ['test/1.moon', 'test/2.moon']
+      },
+      directory_in_test: {
+          src: ['test']
+      },
+      directory_out_test: {
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/directory_out_test': ['test/1.moon']
         }
       },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
+      directories_test: {
+          files: {
+              'tmp/directories_test': ['test']
+          }
+      },
+      linter_test: {
+          options: {
+              lint: true
+          },
+          src: ['test']
+      },
+      outfile_test: {
+          files: {
+              "tmp/out.lua": ['test']
+          }
+      },
+      old_version_test: {
+          files: [{
+            expand: true,
+            cwd: "",
+            src: "test/*.moon",
+            dest: ".",
+            ext: ".lua"
+        }]
       }
     },
 
